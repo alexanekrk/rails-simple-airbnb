@@ -1,0 +1,17 @@
+<h1><%= @flat.name %></h1>
+<br>
+<h4>Located in <strong><%= @flat.address %></strong></h4>
+
+<p class='alert alert-light'><%= @flat.description %></p>
+
+<i class="fa-solid fa-people-group"></i><%= @flat.number_of_guests %>
+<i class="fa-solid fa-euro-sign"></i><%= @flat.price_per_night %>
+
+<br>
+<br>
+
+<%= link_to "Edit the flat", edit_flat_path(@flat), class:'btn btn-primary'%>
+<%= link_to "Delete",
+    flat_path(@flat),
+    data: {turbo_method: :delete, turbo_message: 'Sure?'},
+    class:'btn btn-primary'%>

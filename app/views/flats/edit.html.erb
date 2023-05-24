@@ -1,0 +1,15 @@
+<h1>Edit your flat</h1>
+
+
+<%= simple_form_for(@flat) do |f| %>
+  <%= f.input :name%>
+  <%= f.input :address%>
+  <%= f.input :description%>
+  <%= f.input :price_per_night%>
+  <%= f.input :number_of_guests%>
+  <%= f.submit%>
+<% end %>
+
+<br>
+
+<%= link_to "Go back to flat", flat_path(@flat)%>
