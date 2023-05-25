@@ -52,5 +52,5 @@
   <%= link_to "Edit the flat", edit_flat_path(@flat), class:'btn btn-primary'%>
   <%= link_to "Delete",
       flat_path(@flat),
-      data: {turbo_method: :delete, turbo_message: 'Sure?'},
+      data: {turbo_method: :delete, turbo_confirm: 'Sure?'},
       class:'btn btn-primary'%>
