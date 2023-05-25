@@ -4,7 +4,7 @@
 <div class="d-flex justify-content-between flex-wrap">
   <% @flats.each do |flat| %>
     <div class='card shadow-sm mb-5 bg-white rounded' style="width: 18rem;">
-
+      <img src="<%= flat.image_url %>" alt="image of the flat">
       <div class="card-body">
         <h5 class="card-title"><%= flat.name %></h5>
         <h6 class="card-subtitle mb-4 text-muted"><%= flat.address %></h6>
@@ -19,7 +19,7 @@
         <%= link_to "Edit", edit_flat_path(flat), class:'card-link link-warning' %>
         <%= link_to "Remove",
             flat_path(flat),
-            data: {turbo_method: :delete, turbo_message: 'Sure?'},
+            data: {turbo_method: :delete, turbo_confirm: 'Sure?'},
         class:'card-link link-danger' %></p>
       </div>
     </div>

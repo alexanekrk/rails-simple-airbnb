@@ -27,7 +27,7 @@ puts "Creating 4 flats..."
     description: Faker::Quote.yoda,
     price_per_night: rand(50..500),
     number_of_guests: rand(1..6),
-    image_url: "unsplash_image_url(tags: 'flat-interior')"
+    image_url: 'https://images.unsplash.com/photo-1464890100898-a385f744067f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
   )
   puts "Flat with id #{flat.id} was created"
 end
