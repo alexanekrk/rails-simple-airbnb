@@ -1,14 +1,28 @@
-<h1><%= @flat.name %></h1>
-<br>
-<h4>Located in <strong><%= @flat.address %></strong></h4>
+<div>
 
-<p class='alert alert-light'><%= @flat.description %></p>
+</div>
 
-<i class="fa-solid fa-people-group"></i><%= @flat.number_of_guests %>
-<i class="fa-solid fa-euro-sign"></i><%= @flat.price_per_night %>
+<div class="card mb-3">
+  <div class="card-body">
+    <h1><%= @flat.name %></h1>
+    <h4>Located in <strong><%= @flat.address %></strong></h4>
+  </div>
+</div>
 
-<br>
-<br>
+<div class="card mb-3">
+  <div class="card-body">
+    <h4>More about this flat</h4>
+    <p><%= @flat.description %></p>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-body">
+    <h4>Details</h4>
+    <i class="fa-solid fa-people-group"></i><%= @flat.number_of_guests %>
+    <i class="fa-solid fa-euro-sign"></i><%= @flat.price_per_night %>
+  </div>
+</div>
 
 <%= link_to "Edit the flat", edit_flat_path(@flat), class:'btn btn-primary'%>
 <%= link_to "Delete",
